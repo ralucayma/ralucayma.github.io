@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>禁止的爱电影 - 官方影像门户 | 深度剧情与人文影视社区</title>
+<meta name="description" content="禁止的爱电影官方网站，专注情感剧情、人文短片与独立影像的高清正版视频平台，汇聚优质创作者与深度影视内容生态。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23131826'/><path d='M20 18h10v28H20zM36 18h8l-4 8 4 8-8 4z' fill='%23e8495a'/><circle cx='48' cy='44' r='6' fill='%23f2b544'/></svg>">
+<style>
+:root{
+  --flm-bg:#10131c;
+  --flm-panel:#181d2b;
+  --flm-panel-2:#1f2537;
+  --flm-line:#2c3347;
+  --flm-text:#e8eaf2;
+  --flm-muted:#9aa3bb;
+  --flm-accent:#e8495a;
+  --flm-accent-2:#f2b544;
+  --flm-cyan:#48c9d8;
+  --flm-radius:14px;
+  --flm-sticky:118px;
+  --flm-max:1180px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--flm-sticky);}
+body{
+  margin:0;
+  background:var(--flm-bg);
+  color:var(--flm-text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+.flm-wrap{width:min(100% - 40px,var(--flm-max));margin-inline:auto;}
+.flm-visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* ---------- sticky top ---------- */
+.flm-topbar{position:sticky;top:0;z-index:60;background:rgba(13,16,25,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--flm-line);}
+.flm-announce{background:linear-gradient(90deg,#26131a,#1c1526 55%,#11202a);border-bottom:1px solid var(--flm-line);font-size:13px;}
+.flm-announce-inner{display:flex;align-items:center;gap:14px;padding:8px 0;flex-wrap:wrap;}
+.flm-announce-tag{flex:0 0 auto;background:var(--flm-accent);color:#fff;font-size:11px;letter-spacing:.08em;padding:2px 9px;border-radius:20px;font-weight:700;}
+.flm-announce-list{display:flex;gap:22px;overflow:hidden;flex:1 1 auto;min-width:0;color:var(--flm-muted);}
+.flm-announce-list li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.flm-announce-list b{color:var(--flm-accent-2);font-weight:600;}
+.flm-announce-more{flex:0 0 auto;font-size:12px;color:var(--flm-cyan);border:1px solid var(--flm-line);border-radius:20px;padding:2px 12px;background:transparent;}
+
+.flm-header{padding:14px 0;}
+.flm-header-inner{display:flex;align-items:center;gap:22px;}
+.flm-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+.flm-brand-mark{width:42px;height:42px;border-radius:11px;background:linear-gradient(145deg,var(--flm-accent),#7b1f3a);display:grid;place-items:center;box-shadow:0 6px 18px rgba(232,73,90,.28);}
+.flm-brand-mark svg{width:24px;height:24px;}
+.flm-brand-text b{display:block;font-size:18px;letter-spacing:.02em;}
+.flm-brand-text span{display:block;font-size:11px;color:var(--flm-muted);letter-spacing:.24em;}
+.flm-nav{display:flex;gap:6px;flex:1 1 auto;min-width:0;}
+.flm-nav a{padding:7px 12px;border-radius:9px;font-size:14px;color:var(--flm-muted);transition:.2s;white-space:nowrap;}
+.flm-nav a:hover,.flm-nav a:focus-visible{color:#fff;background:var(--flm-panel-2);}
+.flm-search{position:relative;flex:0 1 230px;}
+.flm-search input{width:100%;background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:10px;padding:9px 14px 9px 34px;color:var(--flm-text);font-size:13px;outline:none;transition:.2s;}
+.flm-search input:focus{border-color:var(--flm-cyan);box-shadow:0 0 0 3px rgba(72,201,216,.14);}
+.flm-search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--flm-muted);}
+.flm-search-feedback{position:absolute;top:calc(100% + 8px);left:0;right:0;background:var(--flm-panel-2);border:1px solid var(--flm-line);border-radius:10px;padding:10px 12px;font-size:12px;color:var(--flm-muted);display:none;z-index:70;}
+.flm-search-feedback.is-open{display:block;}
+.flm-burger{display:none;margin-left:auto;background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:10px;width:42px;height:42px;color:var(--flm-text);font-size:18px;}
+
+/* ---------- buttons ---------- */
+.flm-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:10px;padding:11px 20px;font-size:14px;font-weight:600;border:1px solid transparent;transition:.2s;text-align:center;}
+.flm-btn-primary{background:var(--flm-accent);color:#fff;}
+.flm-btn-primary:hover{background:#f05b6c;transform:translateY(-1px);}
+.flm-btn-ghost{background:transparent;border-color:var(--flm-line);color:var(--flm-text);}
+.flm-btn-ghost:hover{border-color:var(--flm-cyan);color:var(--flm-cyan);}
+.flm-btn-sm{padding:6px 13px;font-size:12px;font-weight:500;border-radius:8px;}
+.flm-btn-icon{background:var(--flm-panel-2);border:1px solid var(--flm-line);color:var(--flm-muted);}
+.flm-btn-icon:hover{color:#fff;border-color:var(--flm-accent);}
+.flm-btn-icon.is-active{color:var(--flm-accent);border-color:var(--flm-accent);background:rgba(232,73,90,.12);}
+
+/* ---------- section shell ---------- */
+.flm-section{padding:62px 0;}
+.flm-section + .flm-section{border-top:1px solid rgba(44,51,71,.6);}
+.flm-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px;}
+.flm-eyebrow{font-size:12px;letter-spacing:.22em;color:var(--flm-accent);font-weight:700;margin-bottom:8px;display:block;}
+.flm-sec-head h2{font-size:clamp(22px,3vw,30px);}
+.flm-sec-head p{color:var(--flm-muted);font-size:14px;max-width:520px;margin-top:6px;}
+.flm-link-more{font-size:13px;color:var(--flm-cyan);white-space:nowrap;}
+
+/* ---------- hero ---------- */
+.flm-hero{padding:46px 0 58px;position:relative;overflow:hidden;}
+.flm-hero::before{content:"";position:absolute;inset:-30% 40% auto -20%;height:520px;background:radial-gradient(circle,rgba(232,73,90,.16),transparent 62%);pointer-events:none;}
+.flm-hero::after{content:"";position:absolute;right:-10%;top:20%;width:420px;height:420px;background:radial-gradient(circle,rgba(72,201,216,.1),transparent 65%);pointer-events:none;}
+.flm-hero-grid{display:grid;grid-template-columns:5fr 5fr;gap:46px;align-items:center;position:relative;z-index:1;}
+.flm-hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--flm-accent-2);border:1px solid rgba(242,181,68,.35);border-radius:30px;padding:4px 13px;margin-bottom:20px;letter-spacing:.1em;}
+.flm-hero h1{font-size:clamp(34px,5vw,60px);letter-spacing:-.02em;line-height:1.1;margin-bottom:18px;}
+.flm-hero h1 em{font-style:normal;color:var(--flm-accent);position:relative;}
+.flm-hero-lead{font-size:15px;color:var(--flm-muted);max-width:490px;margin-bottom:22px;}
+.flm-hero-intro{background:var(--flm-panel);border:1px solid var(--flm-line);border-left:3px solid var(--flm-accent);border-radius:10px;padding:16px 18px;font-size:13.5px;color:#c6cce0;margin-bottom:26px;}
+.flm-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;}
+.flm-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid var(--flm-line);padding-top:22px;}
+.flm-hero-stats b{display:block;font-size:26px;color:var(--flm-accent-2);letter-spacing:-.01em;}
+.flm-hero-stats span{font-size:12px;color:var(--flm-muted);}
+.flm-hero-visual{position:relative;}
+.flm-hero-visual img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:18px;border:1px solid var(--flm-line);}
+.flm-hero-caption{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(13,16,25,.86);backdrop-filter:blur(8px);border:1px solid var(--flm-line);border-radius:12px;padding:12px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.flm-hero-caption b{font-size:14px;display:block;}
+.flm-hero-caption span{font-size:12px;color:var(--flm-muted);}
+.flm-play-dot{flex:0 0 auto;width:42px;height:42px;border-radius:50%;background:var(--flm-accent);display:grid;place-items:center;border:none;color:#fff;font-size:15px;}
+
+/* ---------- focus / feature ---------- */
+.flm-focus{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px;}
+.flm-focus-main{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:var(--flm-radius);overflow:hidden;transition:.25s;}
+.flm-focus-main:hover{transform:translateY(-3px);border-color:rgba(232,73,90,.45);}
+.flm-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.flm-focus-body{padding:20px 22px 22px;}
+.flm-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.flm-tag{font-size:11px;color:var(--flm-cyan);background:rgba(72,201,216,.1);border:1px solid rgba(72,201,216,.28);border-radius:20px;padding:2px 10px;}
+.flm-tag.is-hot{color:var(--flm-accent-2);background:rgba(242,181,68,.1);border-color:rgba(242,181,68,.3);}
+.flm-focus-body h3{font-size:20px;margin-bottom:8px;}
+.flm-focus-body p{font-size:13.5px;color:var(--flm-muted);}
+.flm-meta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--flm-muted);margin-top:14px;}
+.flm-meta b{color:#cfd5e8;font-weight:600;}
+.flm-focus-side{display:flex;flex-direction:column;gap:14px;}
+.flm-video-item{display:flex;gap:14px;background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:12px;padding:13px 15px;transition:.22s;}
+.flm-video-item:hover{border-color:rgba(72,201,216,.4);background:var(--flm-panel-2);}
+.flm-video-thumb{flex:0 0 108px;width:108px;aspect-ratio:16/10;border-radius:9px;overflow:hidden;position:relative;}
+.flm-video-thumb img{width:100%;height:100%;object-fit:cover;}
+.flm-video-thumb .flm-dur{position:absolute;right:5px;bottom:5px;background:rgba(0,0,0,.72);font-size:10px;color:#fff;padding:1px 6px;border-radius:5px;}
+.flm-video-info{min-width:0;flex:1 1 auto;}
+.flm-video-info h4{font-size:14.5px;margin-bottom:5px;}
+.flm-video-info p{font-size:12px;color:var(--flm-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.flm-video-foot{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--flm-muted);margin-top:8px;}
+.flm-video-actions{display:flex;gap:6px;margin-left:auto;}
+
+/* ---------- deep analysis ---------- */
+.flm-deep{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;align-items:start;}
+.flm-article h3{font-size:18px;margin:26px 0 10px;color:#fff;display:flex;align-items:center;gap:9px;}
+.flm-article h3::before{content:"";width:4px;height:17px;background:var(--flm-accent);border-radius:2px;flex:0 0 auto;}
+.flm-article p{font-size:14.5px;color:#b9c0d6;margin-bottom:12px;}
+.flm-article strong{color:var(--flm-accent-2);font-weight:600;}
+.flm-aside{display:flex;flex-direction:column;gap:16px;}
+.flm-aside-card{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:12px;padding:18px;}
+.flm-aside-card h4{font-size:14px;margin-bottom:12px;color:#fff;}
+.flm-aside-card li{padding:9px 0;border-bottom:1px dashed var(--flm-line);font-size:13px;color:var(--flm-muted);}
+.flm-aside-card li:last-child{border-bottom:none;}
+.flm-aside-card li b{color:var(--flm-accent-2);margin-right:7px;}
+.flm-aside-card p{font-size:13px;color:var(--flm-muted);}
+
+/* ---------- topics / specials ---------- */
+.flm-special-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px;}
+.flm-special-card{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:var(--flm-radius);padding:20px;display:flex;flex-direction:column;gap:12px;transition:.22s;}
+.flm-special-card:hover{border-color:rgba(242,181,68,.4);transform:translateY(-2px);}
+.flm-special-status{font-size:11px;padding:2px 10px;border-radius:20px;align-self:flex-start;background:rgba(72,201,216,.12);color:var(--flm-cyan);border:1px solid rgba(72,201,216,.3);}
+.flm-special-card h3{font-size:17px;}
+.flm-special-card > p{font-size:13px;color:var(--flm-muted);}
+.flm-special-list{margin-top:auto;}
+.flm-special-list li{font-size:12.5px;color:#a8b0c8;padding:7px 0;border-top:1px solid var(--flm-line);display:flex;justify-content:space-between;gap:10px;}
+.flm-special-list li span{color:var(--flm-muted);flex:0 0 auto;font-size:11px;}
+
+/* ---------- authors ---------- */
+.flm-authors{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:18px;}
+.flm-author-card{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:var(--flm-radius);padding:20px;transition:.22s;}
+.flm-author-card:hover{background:var(--flm-panel-2);border-color:rgba(232,73,90,.4);}
+.flm-author-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;cursor:pointer;}
+.flm-avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:17px;color:#fff;flex:0 0 auto;border:2px solid rgba(255,255,255,.12);}
+.flm-author-head b{font-size:15px;display:block;}
+.flm-author-head span{font-size:11.5px;color:var(--flm-muted);}
+.flm-author-card p{font-size:12.5px;color:var(--flm-muted);line-height:1.7;}
+.flm-author-nums{display:flex;gap:18px;margin-top:12px;padding-top:12px;border-top:1px solid var(--flm-line);font-size:11.5px;color:var(--flm-muted);}
+.flm-author-nums b{color:var(--flm-accent-2);font-size:14px;display:block;}
+
+/* ---------- ranks ---------- */
+.flm-rank-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;}
+.flm-rank-card{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:var(--flm-radius);padding:20px;}
+.flm-rank-card h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.flm-rank-card h3 i{width:8px;height:8px;border-radius:50%;background:var(--flm-accent);display:inline-block;font-style:normal;}
+.flm-rank-list li{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px dashed var(--flm-line);font-size:13px;}
+.flm-rank-list li:last-child{border-bottom:none;}
+.flm-rank-no{font-size:12px;font-weight:700;color:var(--flm-muted);width:20px;flex:0 0 auto;}
+.flm-rank-list li:nth-child(-n+3) .flm-rank-no{color:var(--flm-accent-2);}
+.flm-rank-title{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.flm-rank-val{font-size:11.5px;color:var(--flm-cyan);flex:0 0 auto;}
+
+/* ---------- comments ---------- */
+.flm-comment-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:16px;}
+.flm-comment{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:12px;padding:17px 18px;position:relative;}
+.flm-comment::before{content:"“";position:absolute;right:16px;top:6px;font-size:40px;color:rgba(232,73,90,.18);font-family:Georgia,serif;line-height:1;}
+.flm-comment p{font-size:13px;color:#bfc6db;margin-bottom:12px;}
+.flm-comment-foot{display:flex;align-items:center;gap:9px;font-size:11.5px;color:var(--flm-muted);}
+.flm-comment-foot .flm-avatar{width:28px;height:28px;font-size:12px;border-width:1px;}
+.flm-stars{color:var(--flm-accent-2);letter-spacing:1px;font-size:12px;}
+
+/* ---------- faq ---------- */
+.flm-faq{display:grid;gap:12px;max-width:880px;}
+.flm-faq details{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:11px;padding:0 18px;transition:.2s;}
+.flm-faq details[open]{border-color:rgba(232,73,90,.45);background:var(--flm-panel-2);}
+.flm-faq summary{list-style:none;cursor:pointer;padding:16px 0;font-size:14.5px;font-weight:600;display:flex;justify-content:space-between;gap:14px;align-items:center;}
+.flm-faq summary::-webkit-details-marker{display:none;}
+.flm-faq summary::after{content:"+";font-size:20px;color:var(--flm-accent);line-height:1;flex:0 0 auto;}
+.flm-faq details[open] summary::after{content:"–";}
+.flm-faq details p{font-size:13px;color:var(--flm-muted);padding-bottom:17px;margin-top:-4px;}
+
+/* ---------- partners / news ---------- */
+.flm-two-col{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:36px;align-items:start;}
+.flm-news li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--flm-line);}
+.flm-news li:last-child{border-bottom:none;}
+.flm-news time{flex:0 0 76px;font-size:12px;color:var(--flm-accent-2);font-weight:600;}
+.flm-news b{font-size:14px;display:block;margin-bottom:3px;}
+.flm-news span{font-size:12.5px;color:var(--flm-muted);}
+.flm-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;}
+.flm-partner{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:10px;padding:16px 10px;text-align:center;font-size:13px;font-weight:600;color:#c3cade;transition:.2s;}
+.flm-partner:hover{color:#fff;border-color:rgba(72,201,216,.4);}
+.flm-partner small{display:block;font-size:10.5px;color:var(--flm-muted);font-weight:400;margin-top:3px;}
+
+/* ---------- submission ---------- */
+.flm-submit{background:linear-gradient(120deg,#1d1420,#131b27 60%,#0f2126);border:1px solid var(--flm-line);border-radius:18px;padding:34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:26px;align-items:center;}
+.flm-submit h2{font-size:clamp(20px,2.6vw,26px);margin-bottom:8px;}
+.flm-submit p{font-size:13.5px;color:var(--flm-muted);max-width:560px;}
+.flm-submit-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* ---------- footer ---------- */
+.flm-footer{border-top:1px solid var(--flm-line);background:#0b0e15;padding:48px 0 26px;}
+.flm-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;margin-bottom:34px;}
+.flm-footer h4{font-size:13.5px;margin-bottom:13px;color:#fff;}
+.flm-footer p,.flm-footer li{font-size:12.5px;color:var(--flm-muted);}
+.flm-footer li{padding:5px 0;}
+.flm-footer-bottom{border-top:1px solid var(--flm-line);padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#77809a;}
+
+/* ---------- toast / modal ---------- */
+.flm-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:var(--flm-panel-2);border:1px solid var(--flm-cyan);color:#fff;font-size:13px;padding:11px 22px;border-radius:10px;opacity:0;pointer-events:none;transition:.3s;z-index:200;box-shadow:0 12px 34px rgba(0,0,0,.5);}
+.flm-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.flm-modal{position:fixed;inset:0;background:rgba(5,7,12,.78);backdrop-filter:blur(6px);display:none;place-items:center;z-index:180;padding:20px;}
+.flm-modal.is-open{display:grid;}
+.flm-modal-box{background:var(--flm-panel);border:1px solid var(--flm-line);border-radius:16px;width:min(100%,520px);max-height:86vh;overflow:auto;padding:26px;position:relative;}
+.flm-modal-box h3{font-size:18px;margin-bottom:14px;}
+.flm-modal-box p{font-size:13.5px;color:var(--flm-muted);margin-bottom:12px;}
+.flm-modal-close{position:absolute;right:14px;top:12px;background:transparent;border:none;color:var(--flm-muted);font-size:22px;line-height:1;}
+.flm-modal-box input,.flm-modal-box textarea{width:100%;background:var(--flm-bg);border:1px solid var(--flm-line);border-radius:9px;color:var(--flm-text);padding:10px 13px;font-size:13px;font-family:inherit;margin-bottom:12px;outline:none;}
+.flm-modal-box input:focus,.flm-modal-box textarea:focus{border-color:var(--flm-cyan);}
+.flm-backtop{position:fixed;right:22px;bottom:28px;width:44px;height:44px;border-radius:50%;background:var(--flm-accent);color:#fff;border:none;font-size:17px;display:grid;place-items:center;opacity:0;pointer-events:none;transition:.25s;z-index:120;box-shadow:0 10px 26px rgba(232,73,90,.35);}
+.flm-backtop.is-show{opacity:1;pointer-events:auto;}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .flm-hero-grid{grid-template-columns:1fr;gap:30px;}
+  .flm-deep{grid-template-columns:1fr;}
+  .flm-two-col{grid-template-columns:1fr;}
+  .flm-focus{grid-template-columns:1fr;}
+  .flm-footer-grid{grid-template-columns:1fr 1fr;}
+  .flm-submit{grid-template-columns:1fr;}
+  .flm-nav{display:none;}
+  .flm-nav.is-open{display:flex;position:absolute;top:100%;left:0;right:0;background:var(--flm-panel);border-bottom:1px solid var(--flm-line);flex-direction:column;padding:12px 20px;gap:2px;z-index:55;}
+  .flm-header-inner{position:relative;flex-wrap:wrap;}
+  .flm-burger{display:grid;place-items:center;}
+  .flm-search{order:5;flex:1 1 100%;}
+  :root{--flm-sticky:132px;}
+}
+@media (max-width:600px){
+  .flm-wrap{width:calc(100% - 28px);}
+  .flm-section{padding:44px 0;}
+  .flm-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+  .flm-hero-stats b{font-size:20px;}
+  .flm-footer-grid{grid-template-columns:1fr;}
+  .flm-video-item{flex-direction:column;}
+  .flm-video-thumb{width:100%;flex:0 0 auto;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头 -->
+<div class="flm-topbar">
+  <div class="flm-announce">
+    <div class="flm-wrap flm-announce-inner">
+      <span class="flm-announce-tag">公告</span>
+      <ul class="flm-announce-list">
+        <li><b>11-22</b> 冬季情感短片企划《未寄出的信》第 6 集上线</li>
+        <li><b>11-20</b> 创作者扶持计划第二期报名开启，最高扶持 5 万元</li>
+        <li><b>11-18</b> 高清正版片库新增 42 部独立剧情短片</li>
+      </ul>
+      <button class="flm-announce-more" type="button" data-flm-toast="已为你展示最新公告，更多内容请在「企业动态」查看">更多</button>
+    </div>
+  </div>
+  <header class="flm-header">
+    <div class="flm-wrap flm-header-inner">
+      <a class="flm-brand" href="#flm-hero" aria-label="禁止的爱电影官方网站首页">
+        <span class="flm-brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h6v16H6z" fill="#fff"/><path d="M14 4h4l-2 8 2 8h-4z" fill="#fff" opacity=".7"/></svg>
+        </span>
+        <span class="flm-brand-text"><b>禁止的爱</b><span>FILM OFFICIAL</span></span>
+      </a>
+      <nav class="flm-nav" id="flm-nav" aria-label="主导航">
+        <a href="#flm-hero">首页</a>
+        <a href="#flm-picks">精选影像</a>
+        <a href="#flm-analysis">深度解析</a>
+        <a href="#flm-specials">专题企划</a>
+        <a href="#flm-authors">创作者</a>
+        <a href="#flm-ranks">榜单</a>
+        <a href="#flm-faq">帮助</a>
+      </nav>
+      <div class="flm-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" id="flm-search-input" placeholder="搜索影片 / 创作者 / 企划" aria-label="站内搜索" autocomplete="off">
+        <div class="flm-search-feedback" id="flm-search-feedback" role="status"></div>
+      </div>
+      <button class="flm-burger" id="flm-burger" type="button" aria-label="展开导航菜单" aria-expanded="false" aria-controls="flm-nav">☰</button>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- S2 品牌首屏 -->
+  <section class="flm-hero" id="flm-hero">
+    <div class="flm-wrap flm-hero-grid">
+      <div>
+        <span class="flm-hero-kicker">官方网站 · 情感影像内容平台</span>
+        <h1>禁止的爱电影</h1>
+        <p class="flm-hero-lead">一部电影，一段不能言说的情感。<strong>禁止的爱电影</strong>以原创剧情短片与深度人文影像为核心，为观众与创作者提供正版高清的观看与交流空间。</p>
+        <div class="flm-hero-intro">
+          <strong>禁止的爱电影</strong>是一家专注情感剧情影像的企业级视频品牌，主营原创短片发行、创作者社区运营与影视内容宣发。作为持续运营的官方网站，我们以「克制、真实、有力量」为选片标准，深耕情感叙事与人文观察垂直领域，累计上线高清正版作品逾 2800 部，与 300 余位独立创作者建立长期合作，致力于搭建值得信赖的高品质内容生态。
+        </div>
+        <div class="flm-hero-actions">
+          <a class="flm-btn flm-btn-primary" href="#flm-picks">观看精选影像</a>
+          <a class="flm-btn flm-btn-ghost" href="#flm-authors">认识创作者</a>
+          <button class="flm-btn flm-btn-ghost" type="button" data-flm-modal="flm-modal-submit">投递我的作品</button>
+        </div>
+        <div class="flm-hero-stats">
+          <div><b data-flm-count="2846">0</b><span>正版高清作品</span></div>
+          <div><b data-flm-count="318">0</b><span>签约创作者</span></div>
+          <div><b data-flm-count="97">0</b><span>口碑好评率（%）</span></div>
+        </div>
+      </div>
+      <div class="flm-hero-visual">
+        <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 640'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231a1226'/%3E%3Cstop offset='.55' stop-color='%23401a2b'/%3E%3Cstop offset='1' stop-color='%230e1a26'/%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2b544' stop-opacity='.9'/%3E%3Cstop offset='1' stop-color='%23e8495a' stop-opacity='.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='640' fill='url(%23g1)'/%3E%3Ccircle cx='560' cy='180' r='150' fill='%23f2b544' opacity='.16'/%3E%3Ccircle cx='560' cy='180' r='96' fill='%23f2b544' opacity='.22'/%3E%3Cpath d='M0 470 Q200 380 400 460 T800 430 L800 640 L0 640 Z' fill='%230b0e15' opacity='.85'/%3E%3Crect x='120' y='300' width='180' height='240' rx='16' fill='%23e8495a' opacity='.18'/%3E%3Crect x='150' y='330' width='120' height='8' rx='4' fill='%23e8495a' opacity='.7'/%3E%3Crect x='150' y='356' width='90' height='6' rx='3' fill='%23e8eaf2' opacity='.4'/%3E%3Cpath d='M340 260 L430 210 L430 470 L340 420 Z' fill='url(%23g2)'/%3E%3Ccircle cx='600' cy='420' r='40' fill='none' stroke='%2348c9d8' stroke-width='3' opacity='.7'/%3E%3Cpath d='M588 402 L618 420 L588 438 Z' fill='%2348c9d8' opacity='.8'/%3E%3C/svg%3E" alt="禁止的爱电影官方网站首屏主视觉：暗色剧场光影与胶片构图" width="800" height="640">
+        <div class="flm-hero-caption">
+          <div>
+            <b>本月主推 · 未寄出的信</b>
+            <span>6 集情感短片 · 每周五更新</span>
+          </div>
+          <button class="flm-play-dot" type="button" aria-label="播放本月主推预告" data-flm-toast="预告片加载中，请稍候">▶</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 + 视频流 -->
+  <section class="flm-section" id="flm-picks">
+    <div class="flm-wrap">
+      <div class="flm-sec-head">
+        <div>
+          <span class="flm-eyebrow">FOCUS · 精选</span>
+          <h2>禁止的爱电影本周焦点影像</h2>
+          <p>由编辑团队与社区评审共同选出的重点内容，每一部都经过正版授权与高清画质校验。</p>
+        </div>
+        <a class="flm-link-more" href="#flm-ranks">查看全部榜单 →</a>
+      </div>
+
+      <div class="flm-focus">
+        <article class="flm-focus-main">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='fg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230f2230'/%3E%3Cstop offset='.6' stop-color='%23223a4a'/%3E%3Cstop offset='1' stop-color='%234a2333'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23fg)'/%3E%3Ccircle cx='230' cy='210' r='120' fill='%23f2b544' opacity='.14'/%3E%3Cpath d='M0 360 L180 300 L360 345 L540 290 L800 350 L800 450 L0 450 Z' fill='%230a0f17' opacity='.9'/%3E%3Crect x='470' y='120' width='210' height='150' rx='10' fill='%23e8495a' opacity='.2'/%3E%3Cpath d='M500 160 h140 M500 195 h100 M500 230 h120' stroke='%23e8eaf2' stroke-opacity='.5' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M640 250 l50 -28 v56 z' fill='%2348c9d8' opacity='.85'/%3E%3C/svg%3E" alt="本周焦点短片《雨停之后》封面：蓝色雨夜与写信剪影" width="800" height="450">
+          <div class="flm-focus-body">
+            <div class="flm-tags">
+              <span class="flm-tag is-hot">编辑推荐</span>
+              <span class="flm-tag">情感剧情</span>
+              <span class="flm-tag">原创短片</span>
+            </div>
+            <h3>雨停之后：一封迟到了十二年的信</h3>
+            <p>导演用 26 分钟讲完一场没有告别的离别。故事从旧屋阁楼里的一只铁盒开始，克制地描摹两代人的沉默与和解，被社区观众称为「今年最值得安静看完的一部片子」。</p>
+            <div class="flm-meta">
+              <span>导演 <b>沈知白</b></span>
+              <span>播放 <b>82.6万</b></span>
+              <span>点赞 <b>4.7万</b></span>
+              <span>收藏 <b>1.9万</b></span>
+            </div>
+            <div class="flm-video-actions" style="margin-top:16px;margin-left:0;">
+              <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-like aria-pressed="false">♡ 点赞</button>
+              <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-fav aria-pressed="false">☆ 收藏</button>
+              <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-copy="https://example.com/film/rain-after">复制链接</button>
+              <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-share>分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="flm-focus-side">
+          <article class="flm-video-item">
+            <div class="flm-video-thumb">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23151b2a'/%3E%3Ccircle cx='250' cy='60' r='52' fill='%23e8495a' opacity='.24'/%3E%3Cpath d='M0 150 Q90 110 170 140 T320 120 V200 H0 Z' fill='%230c1119'/%3E%3Crect x='40' y='60' width='90' height='64' rx='8' fill='%2348c9d8' opacity='.2'/%3E%3Cpath d='M58 82 h54 M58 100 h34' stroke='%23e8eaf2' stroke-opacity='.5' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" alt="短片《站台尽头》封面：深夜站台与列车进站灯" width="320" height="200">
+              <span class="flm-dur">14:32</span>
+            </div>
+            <div class="flm-video-info">
+              <h4>站台尽头：我们最后一次并肩看末班车</h4>
+              <p>一部关于异地与错过的纪录式短剧，镜头跟随两人在凌晨站台的三小时。</p>
+              <div class="flm-video-foot">
+                <span>林晚照</span><span>播放 41.2万</span>
+                <div class="flm-video-actions">
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-like aria-pressed="false">♡</button>
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-fav aria-pressed="false">☆</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="flm-video-item">
+            <div class="flm-video-thumb">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23221a14'/%3E%3Ccircle cx='90' cy='70' r='60' fill='%23f2b544' opacity='.22'/%3E%3Cpath d='M0 170 L100 120 L200 160 L320 130 V200 H0 Z' fill='%23150f0a'/%3E%3Crect x='180' y='54' width='104' height='70' rx='6' fill='%23e8495a' opacity='.18' stroke='%23f2b544' stroke-opacity='.4'/%3E%3Cpath d='M196 78 h70 M196 98 h46' stroke='%23f2b544' stroke-opacity='.7' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" alt="短片《旧相册的第七页》封面：暖黄台灯与翻开的相册" width="320" height="200">
+              <span class="flm-dur">21:08</span>
+            </div>
+            <div class="flm-video-info">
+              <h4>旧相册的第七页：母亲年轻时的那场雨</h4>
+              <p>以家庭影像修复为线索，重访一段被时间磨平的往事。</p>
+              <div class="flm-video-foot">
+                <span>周允之</span><span>播放 36.8万</span>
+                <div class="flm-video-actions">
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-like aria-pressed="false">♡</button>
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-fav aria-pressed="false">☆</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="flm-video-item">
+            <div class="flm-video-thumb">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%230d1a1c'/%3E%3Crect x='0' y='0' width='320' height='200' fill='url(%23none)'/%3E%3Cpath d='M0 120 L80 90 L160 130 L240 80 L320 110 V200 H0 Z' fill='%23091518'/%3E%3Ccircle cx='240' cy='66' r='44' fill='%2348c9d8' opacity='.22'/%3E%3Cpath d='M60 60 h80 v80 h-80 z' fill='none' stroke='%2348c9d8' stroke-opacity='.5' stroke-width='3'/%3E%3Cpath d='M80 140 L100 96 L120 128 L138 88' stroke='%23f2b544' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="短片《山那边有条河》封面：青色山谷与远行路径" width="320" height="200">
+              <span class="flm-dur">18:44</span>
+            </div>
+            <div class="flm-video-info">
+              <h4>山那边有条河：离乡十年后的第一次回望</h4>
+              <p>纪录片式漫游，沿着一条河重新认识自己长大的小镇。</p>
+              <div class="flm-video-foot">
+                <span>顾青禾</span><span>播放 29.4万</span>
+                <div class="flm-video-actions">
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-like aria-pressed="false">♡</button>
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-fav aria-pressed="false">☆</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="flm-video-item">
+            <div class="flm-video-thumb">
+              <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%231b1424'/%3E%3Ccircle cx='160' cy='100' r='72' fill='none' stroke='%23e8495a' stroke-width='3' opacity='.6'/%3E%3Ccircle cx='160' cy='100' r='44' fill='%23e8495a' opacity='.18'/%3E%3Cpath d='M148 84 l30 16 l-30 16 z' fill='%23f2b544' opacity='.9'/%3E%3Cpath d='M0 176 h320' stroke='%2348c9d8' stroke-opacity='.3' stroke-width='2'/%3E%3C/svg%3E" alt="短片《无声告白》封面：紫黑背景与播放环形标识" width="320" height="200">
+              <span class="flm-dur">09:57</span>
+            </div>
+            <div class="flm-video-info">
+              <h4>无声告白：没有台词的七分钟</h4>
+              <p>全片无对白，靠光影与呼吸完成一次情绪递进，社区评分 9.4。</p>
+              <div class="flm-video-foot">
+                <span>程述</span><span>播放 25.1万</span>
+                <div class="flm-video-actions">
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-like aria-pressed="false">♡</button>
+                  <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-fav aria-pressed="false">☆</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M15 关键词深度解析 -->
+  <section class="flm-section" id="flm-analysis">
+    <div class="flm-wrap">
+      <div class="flm-sec-head">
+        <div>
+          <span class="flm-eyebrow">INSIGHT · 深度解析</span>
+          <h2>什么是「禁止的爱电影」：品牌理念与内容边界</h2>
+          <p>一篇写给新观众与创作者的说明，解释我们为何以「禁止的爱」为题，以及我们如何在影像中处理情感与道德的距离。</p>
+        </div>
+      </div>
+      <div class="flm-deep">
+        <article class="flm-article">
+          <h3>一、命名的由来：被禁止的情感，正是最真实的表达</h3>
+          <p>「禁止的爱电影」并不是一个关于禁区的猎奇标签，而是我们对抗庸常叙事的一次命名实验。在很长一段时间里，影视作品处理情感的方式趋于两极化：要么把爱神化为不可置疑的圆满，要么把难以命名的关系简化为道德审判。我们希望提供第三种可能——把镜头放低，去看那些在社会规范中被压低声量、在家庭饭桌上被快速带过、在深夜里只能独自消化的情感。<strong>禁止的爱电影</strong>作为官方网站，正是为这类叙事保留一块可以公开讨论的场域。</p>
+          <p>我们观察到的观众反馈非常具体：有观众在《雨停之后》的评论区写了两千字，讲述自己与父亲之间长达十年的沉默；也有人在《站台尽头》下面留言，说那是他第一次把异地恋的疲惫说出口。这些反馈让我们确信，所谓「禁止」，从来不是题材的禁区，而是表达方式的稀缺。平台以<strong>原创</strong>与<strong>正版</strong>为底线，以克制的表达为方法，让每一段难以言说的情感，都有被完整呈现的机会。</p>
+          <p>因此在选片上，我们设置了三个内部标准：第一，故事必须有一个具体的日常支点，比如一封信、一次末班车、一间旧屋；第二，人物不做非黑即白的判定，允许他们犹豫、后退、反复；第三，影像语言必须服务于情绪，而不是炫技。正是这三条，构成了我们相对其他视频社区最为核心的差异，也让「禁止的爱电影」这四个字在行业内逐渐成为一个可识别的品质标签。</p>
+
+          <h3>二、内容生态：从一部短片到一条完整的创作链路</h3>
+          <p>一部短片从构思到上线，通常要经过选题、剧本、勘景、拍摄、剪辑、调色、审片与上线八个环节。我们的内容生态围绕这八个环节搭建：在选题阶段，编辑团队会公开季度主题与社区共创议题；在剧本阶段，签约创作者可以申请剧本工坊与咨询支持；在制作阶段，平台提供设备借用与后期补贴；在上线阶段，则通过首页焦点、专题企划与榜单曝光形成完整的<strong>内容生态</strong>闭环。我们认为，一个真正值得信赖的视频平台，不能只做展示窗口，还应当承担起对创作者的实际支持。</p>
+          <p>以 2026 年冬季企划「未寄出的信」为例，从公开征集到最终成片，共有 137 位创作者提交了创作提案，其中 12 个提案进入孵化，6 部成片在平台上线。数据方面，这一企划的总播放量突破 420 万，社区平均完播率达到 68%，远高于同类情感短片的平均水平。更重要的是，参与者中有一半以上是第一次完整制作剧情短片的独立创作者，他们在过程中完成了从「记录者」到「叙事者」的转变。这种持续运营的能力，是我们看待自身企业价值的重要维度。</p>
+
+          <h3>三、平台原则：高清、正版与用户至上</h3>
+          <p>在视频行业，画质与版权往往是一对矛盾。为了追求<strong>高清</strong>的观看体验，我们统一了制作与上线的技术规范：主推作品提供 1080P 及以上画质，音频采用标准化响度处理，字幕采用可切换的双语稿件。同时，平台严格审核素材来源，所有上线作品须签署<strong>正版</strong>授权声明，音乐、字体、影像素材均须可追溯。我们相信，只有当创作者的权利被认真对待，作品才可能被认真观看。</p>
+          <p>用户至上是另一条不可让渡的原则。我们建立了社区评审机制，让普通观众也能参与月度精选的投票；同时设立内容反馈通道，任何关于片源质量、字幕错误、社区氛围的问题，都可以在 48 小时内得到响应。过去一年，平台累计处理用户反馈 3200 余条，问题解决率超过 95%。这些数字并不显眼，但它们共同说明一件事：一个视频品牌的口碑，最终来自一次次具体的回应，而不是一句宏大的口号。</p>
+          <p>面向未来，我们仍然会把重心放在情感叙事这一垂直领域。我们不会因为某个题材短期热度和流量而改变选片标准，也不会为了追赶节奏而牺牲作品的完整表达。我们希望「禁止的爱电影」这个名字，最终能够成为观众在寻找真实情感影像时的第一联想——一个可以安静看片、也敢于讨论的地方。这也是我们对企业社会责任最朴素的兑现方式：为复杂的情感，保留被理解的余地。</p>
+        </article>
+        <aside class="flm-aside">
+          <div class="flm-aside-card">
+            <h4>平台关键数据</h4>
+            <ul>
+              <li><b>2846</b>正版高清作品在线</li>
+              <li><b>318</b>签约创作者分布 26 个城市</li>
+              <li><b>420万</b>冬季企划累计播放</li>
+              <li><b>95%</b>用户反馈解决率</li>
+            </ul>
+          </div>
+          <div class="flm-aside-card">
+            <h4>选片三原则</h4>
+            <p>① 具体的日常支点<br>② 不作非黑即白的判定<br>③ 影像语言服务情绪</p>
+          </div>
+          <div class="flm-aside-card">
+            <h4>快速入口</h4>
+            <p style="margin-bottom:10px;">想参与下一季共创议题？</p>
+            <button class="flm-btn flm-btn-sm flm-btn-primary" type="button" data-flm-modal="flm-modal-submit">报名创作者计划</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="flm-section" id="flm-specials">
+    <div class="flm-wrap">
+      <div class="flm-sec-head">
+        <div>
+          <span class="flm-eyebrow">SERIES · 专题</span>
+          <h2>专题企划：把情感放进更长的时间线</h2>
+          <p>每季度一个公开议题，由创作者共同完成。专题持续更新中，欢迎通过投稿入口加入。</p>
+        </div>
+        <a class="flm-link-more" href="#flm-submit">参与投稿 →</a>
+      </div>
+      <div class="flm-special-grid">
+        <article class="flm-special-card">
+          <span class="flm-special-status">更新中 · 第 6 集</span>
+          <h3>未寄出的信</h3>
+          <p>以「没有寄出的信」为起点，讲述那些在合适的时间没有说出口的话。冬季限定，共 8 集。</p>
+          <ul class="flm-special-list">
+            <li>第 6 集 · 写给十年后的自己<span>12-18</span></li>
+            <li>第 5 集 · 邮筒旁边的三分钟<span>12-11</span></li>
+            <li>第 4 集 · 一张被退回的明信片<span>12-04</span></li>
+          </ul>
+        </article>
+        <article class="flm-special-card">
+          <span class="flm-special-status">已完结 · 共 5 集</span>
+          <h3>小城夜行</h3>
+          <p>沿着三线小城的夜路，记录便利店、网吧与末班公交里的情感片段，带观众重新认识熟悉的街道。</p>
+          <ul class="flm-special-list">
+            <li>第 5 集 · 凌晨两点的豆浆摊<span>10-26</span></li>
+            <li>第 4 集 · 网吧最后一排<span>10-19</span></li>
+            <li>第 3 集 · 末班公交的窗户<span>10-12</span></li>
+          </ul>
+        </article>
+        <article class="flm-special-card">
+          <span class="flm-special-status">预告 · 12 月启动</span>
+          <h3>厨房里的对话</h3>
+          <p>以一顿饭为单位，观察家庭成员之间如何借用食物完成一次艰难的表达。全片采用自然光拍摄。</p>
+          <ul class="flm-special-list">
+            <li>先导片 · 一碗面的时间<span>12-25</span></li>
+            <li>共创征集 · 你的家庭菜谱<span>12-20</span></li>
+            <li>拍摄手记 · 厨房布光<span>12-15</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="flm-section" id="flm-authors">
+    <div class="flm-wrap">
+      <div class="flm-sec-head">
+        <div>
+          <span class="flm-eyebrow">CREATORS · 创作者</span>
+          <h2>与禁止的爱电影一起讲述的人</h2>
+          <p>点击头像可查看创作者档案与他们正在制作的项目。</p>
+        </div>
+      </div>
+      <div class="flm-authors" id="flm-author-list">
+        <article class="flm-author-card">
+          <div class="flm-author-head" data-flm-author="沈知白|导演 / 编剧|讲述克制的情感与家庭关系，擅长用静景完成情绪转折。">
+            <span class="flm-avatar" style="background:linear-gradient(145deg,#e8495a,#7b1f3a)">沈</span>
+            <div><b>沈知白</b><span>导演 / 编剧</span></div>
+          </div>
+          <p>毕业于戏剧影视文学专业，曾从事话剧舞台监督五年。作品擅长在极简空间里调度人物关系，节奏偏慢但情绪密度高。代表作《雨停之后》获得社区年度最佳剧情短片。</p>
+          <div class="flm-author-nums"><div><b>46</b>作品</div><div><b>18.3万</b>关注</div></div>
+        </article>
+        <article class="flm-author-card">
+          <div class="flm-author-head" data-flm-author="林晚照|纪实导演|专注城市夜晚与公共空间里的人际瞬间。">
+            <span class="flm-avatar" style="background:linear-gradient(145deg,#48c9d8,#1a5a70)">林</span>
+            <div><b>林晚照</b><span>纪实导演</span></div>
+          </div>
+          <p>长期拍摄城市夜行题材，习惯不带剧本进入现场，用长时间等待换取真实的反应。她的作品总有一种被夜色包裹的温柔，镜头语言干净，几乎不打断被拍摄者的生活。</p>
+          <div class="flm-author-nums"><div><b>38</b>作品</div><div><b>14.6万</b>关注</div></div>
+        </article>
+        <article class="flm-author-card">
+          <div class="flm-author-head" data-flm-author="周允之|剪辑师 / 导演|从家庭影像修复进入叙事创作。">
+            <span class="flm-avatar" style="background:linear-gradient(145deg,#f2b544,#7a4c12)">周</span>
+            <div><b>周允之</b><span>剪辑师 / 导演</span></div>
+          </div>
+          <p>做过八年影视后期，习惯了在素材堆里找故事。转入导演工作后，他把剪辑思维带进拍摄现场，作品结构清晰、情绪递进准确，尤其擅长处理时间跨度的叙事。</p>
+          <div class="flm-author-nums"><div><b>29</b>作品</div><div><b>9.2万</b>关注</div></div>
+        </article>
+        <article class="flm-author-card">
+          <div class="flm-author-head" data-flm-author="顾青禾|纪录片作者|记录离乡与返乡之间的心理距离。">
+            <span class="flm-avatar" style="background:linear-gradient(145deg,#3f8f5f,#173a2a)">顾</span>
+            <div><b>顾青禾</b><span>纪录片作者</span></div>
+          </div>
+          <p>在南方小城长大，作品多围绕河流、山路与旧屋展开。她相信地理环境会影响人的情感表达方式，因此常常用一整部片子去描摹一个地点的气味与声音，风格冷静而有耐心。</p>
+          <div class="flm-author-nums"><div><b>21</b>作品</div><div><b>7.8万</b>关注</div></div>
+        </article>
+        <article class="flm-author-card">
+          <div class="flm-author-head" data-flm-author="程述|实验影像创作者|用无对白方式处理情绪与身体。">
+            <span class="flm-avatar" style="background:linear-gradient(145deg,#8a6ed4,#3a2a6a)">程</span>
+            <div><b>程述</b><span>实验影像创作者</span></div>
+          </div>
+          <p>视觉艺术背景，作品常以无对白、强光影的方式呈现。他把拍摄视为一次身体性的练习，通过呼吸、停顿与视线完成叙事，是社区里最具辨识度的作者之一。</p>
+          <div class="flm-author-nums"><div><b>17</b>作品</div><div><b>6.4万</b>关注</div></div>
+        </article>
+        <article class="flm-author-card">
+          <div class="flm-author-head" data-flm-author="夏屿|声音设计 / 导演|专注环境声与情感氛围的构建。">
+            <span class="flm-avatar" style="background:linear-gradient(145deg,#d4658a,#5c1f38)">夏</span>
+            <div><b>夏屿</b><span>声音设计 / 导演</span></div>
+          </div>
+          <p>从声音设计起步，主张先用耳朵理解一个空间。她的作品里，雨声、脚步声与远处的车流常常比台词更重要，被认为拓宽了情感短片的听觉表达方式。</p>
+          <div class="flm-author-nums"><div><b>24</b>作品</div><div><b>8.1万</b>关注</div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 榜单 + 评价 -->
+  <section class="flm-section" id="flm-ranks">
+    <div class="flm-wrap">
+      <div class="flm-sec-head">
+        <div>
+          <span class="flm-eyebrow">RANK · 榜单</span>
+          <h2>本周数据榜与社区口碑</h2>
+          <p>数据由平台播放、点赞与社区评审综合计算，每周一更新。</p>
+        </div>
+      </div>
+      <div class="flm-rank-grid">
+        <div class="flm-rank-card">
+          <h3><i></i>热度榜 · 本周</h3>
+          <ul class="flm-rank-list">
+            <li><span class="flm-rank-no">01</span><span class="flm-rank-title">雨停之后：一封迟到了十二年的信</span><span class="flm-rank-val">82.6万</span></li>
+            <li><span class="flm-rank-no">02</span><span class="flm-rank-title">站台尽头：我们最后一次并肩</span><span class="flm-rank-val">41.2万</span></li>
+            <li><span class="flm-rank-no">03</span><span class="flm-rank-title">旧相册的第七页</span><span class="flm-rank-val">36.8万</span></li>
+            <li><span class="flm-rank-no">04</span><span class="flm-rank-title">山那边有条河</span><span class="flm-rank-val">29.4万</span></li>
+            <li><span class="flm-rank-no">05</span><span class="flm-rank-title">无声告白：没有台词的七分钟</span><span class="flm-rank-val">25.1万</span></li>
+          </ul>
+        </div>
+        <div class="flm-rank-card">
+          <h3><i style="background:var(--flm-cyan)"></i>新人榜 · 本月</h3>
+          <ul class="flm-rank-list">
+            <li><span class="flm-rank-no">01</span><span class="flm-rank-title">顾青禾 · 山那边有条河</span><span class="flm-rank-val">+312%</span></li>
+            <li><span class="flm-rank-no">02</span><span class="flm-rank-title">程述 · 无声告白</span><span class="flm-rank-val">+268%</span></li>
+            <li><span class="flm-rank-no">03</span><span class="flm-rank-title">夏屿 · 雨声的三分钟</span><span class="flm-rank-val">+221%</span></li>
+            <li><span class="flm-rank-no">04</span><span class="flm-rank-title">何知远 · 电梯里的第二次相遇</span><span class="flm-rank-val">+184%</span></li>
+          </ul>
+        </div>
+        <div class="flm-rank-card">
+          <h3><i style="background:var(--flm-accent-2)"></i>口碑榜 · 评分</h3>
+          <ul class="flm-rank-list">
+            <li><span class="flm-rank-no">01</span><span class="flm-rank-title">无声告白</span><span class="flm-rank-val">9.4 分</span></li>
+            <li><span class="flm-rank-no">02</span><span class="flm-rank-title">雨停之后</span><span class="flm-rank-val">9.3 分</span></li>
+            <li><span class="flm-rank-no">03</span><span class="flm-rank-title">旧相册的第七页</span><span class="flm-rank-val">9.1 分</span></li>
+            <li><span class="flm-rank-no">04</span><span class="flm-rank-title">站台尽头</span><span class="flm-rank-val">8.9 分</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:44px;">
+        <div class="flm-sec-head" style="margin-bottom:22px;">
+          <div>
+            <span class="flm-eyebrow">VOICES · 社区评价</span>
+            <h2 style="font-size:22px;">观众怎么说禁止的爱电影</h2>
+          </div>
+          <button class="flm-btn flm-btn-sm flm-btn-icon" type="button" data-flm-modal="flm-modal-comment">我要写评论</button>
+        </div>
+        <div class="flm-comment-grid">
+          <article class="flm-comment">
+            <p>看《雨停之后》的时候，我第一次给我爸发了消息。片子没有煽情，但那种压着的情绪太熟悉了，像极了我家饭桌上的沉默。</p>
+            <div class="flm-comment-foot"><span class="flm-avatar" style="background:#e8495a">阿</span><span>阿柚</span><span>·</span><span>看过 42 部</span></div>
+          </article>
+          <article class="flm-comment">
+            <p>画质和声音都很扎实，尤其是雨声的处理，戴耳机看完全是另一种体验。作为资深影迷，我觉得这个平台在技术细节上比很多大站都用心。</p>
+            <div class="flm-comment-foot"><span class="flm-avatar" style="background:#48c9d8">K</span><span>Kai</span><span>·</span><span class="flm-stars">★★★★★</span></div>
+          </article>
+          <article class="flm-comment">
+            <p>我是刚投稿的新人，第一次收到编辑的逐条反馈，足足写了八百多字。虽然没进精选，但那种被认真对待的感觉很少见。</p>
+            <div class="flm-comment-foot"><span class="flm-avatar" style="background:#f2b544">小</span><span>小满</span><span>·</span><span>创作者</span></div>
+          </article>
+          <article class="flm-comment">
+            <p>《站台尽头》里有个镜头我反复看了五遍——两人站在站台上，谁都没说话，只有广播在响。太好，也太疼了。</p>
+            <div class="flm-comment-foot"><span class="flm-avatar" style="background:#3f8f5f">木</span><span>木木</span><span>·</span><span>看过 18 部</span></div>
+          </article>
+          <article class="flm-comment">
+            <p>建议增加按导演筛选的功能，现在只能一个个找。内容本身是好的，但社区工具还可以再细一点，比如收藏夹分组。</p>
+            <div class="flm-comment-foot"><span class="flm-avatar" style="background:#8a6ed4">Q</span><span>Qing</span><span>·</span><span>功能反馈</span></div>
+          </article>
+          <article class="flm-comment">
+            <p>每周五等更新已经成了习惯。这个平台最难得的是，它不急着给你答案，也不逼你站队，只是把一段关系完整地放给你看。</p>
+            <div class="flm-comment-foot"><span class="flm-avatar" style="background:#d4658a">晚</span><span>晚风</span><span>·</span><span>连续观看 31 周</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + 合作品牌 + FAQ -->
+  <section class="flm-section" id="flm-faq">
+    <div class="flm-wrap">
+      <div class="flm-two-col">
+        <div>
+          <div class="flm-sec-head" style="margin-bottom:22px;">
+            <div>
+              <span class="flm-eyebrow">NEWS · 企业动态</span>
+              <h2 style="font-size:22px;">官方发布与内容更新</h2>
+            </div>
+          </div>
+          <ul class="flm-news">
+            <li><time>2026-11-22</time><div><b>冬季企划《未寄出的信》第 6 集上线</b><span>本集由沈知白执导，讲述写给十年后自己的一封信，上线首日播放突破 32 万。</span></div></li>
+            <li><time>2026-11-20</time><div><b>创作者扶持计划第二期报名开启</b><span>面向独立创作者开放，提供最高 5 万元制作扶持与后期资源包，报名期至 12 月 20 日。</span></div></li>
+            <li><time>2026-11-18</time><div><b>高清正版片库新增 42 部独立剧情短片</b><span>全部完成版权核验与画质校验，支持多音轨与可切换字幕。</span></div></li>
+            <li><time>2026-11-15</time><div><b>社区评审机制升级，新增月度投票入口</b><span>观众可对候选作品进行评分与留言，评分结果将计入月度精选评审。</span></div></li>
+          </ul>
+
+          <div class="flm-sec-head" style="margin:34px 0 18px;">
+            <div>
+              <span class="flm-eyebrow">PARTNERS · 合作</span>
+              <h2 style="font-size:22px;">合作品牌与伙伴</h2>
+            </div>
+          </div>
+          <div class="flm-partners">
+            <div class="flm-partner">星轨影业<small>联合出品</small></div>
+            <div class="flm-partner">南岸放映<small>线下展映</small></div>
+            <div class="flm-partner">声场实验室<small>声音支持</small></div>
+            <div class="flm-partner">青禾影像基金会<small>公益合作</small></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flm-sec-head" style="margin-bottom:22px;">
+            <div>
+              <span class="flm-eyebrow">FAQ · 帮助</span>
+              <h2 style="font-size:22px;">关于平台与投稿</h2>
+            </div>
+          </div>
+          <div class="flm-faq">
+            <details open>
+              <summary>「禁止的爱电影」主要收录什么类型的作品？</summary>
+              <p>平台以情感剧情短片与人文纪录影像为主，强调具体的生活细节与克制的表达方式。所有上线作品均提供高清正版授权信息，不收录未经授权的搬运内容。</p>
+            </details>
+            <details>
+              <summary>如何投稿自己的短片？</summary>
+              <p>点击页面中的「投递我的作品」按钮，填写作品名称、时长、剧本概述与授权声明即可。编辑团队会在 7 个工作日内给予反馈，入选作品将获得首页推荐位与制作补贴申请资格。</p>
+            </details>
+            <details>
+              <summary>平台作品是否可以下载？</summary>
+              <p>部分作品开放官方下载通道，创作者可自主选择是否授权下载。下载内容仅限个人观看，禁止用于二次剪辑或商业传播。</p>
+            </details>
+            <details>
+              <summary>创作者扶持计划的扶持内容有哪些？</summary>
+              <p>包括制作资金扶持、设备借用、后期调色与声音支持、剧本工坊咨询，以及上线后的专题曝光资源。第一期共有 9 位创作者获得扶持。</p>
+            </details>
+            <details>
+              <summary>社区评论有哪些规范？</summary>
+              <p>我们鼓励具体、真诚的讨论，反对人身攻击、剧透式争吵与商业导流。违反规范的评论会被折叠，情节严重者将限制评论权限。</p>
+            </details>
+            <details>
+              <summary>如何参与月度精选的投票？</summary>
+              <p>注册账号后即可在「社区评审」入口参与投票，评分与留言将作为编辑评审的重要参考。每月的投票结果会在次月 5 日公布。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M13 联系 / 投稿 -->
+  <section class="flm-section" id="flm-submit">
+    <div class="flm-wrap">
+      <div class="flm-submit">
+        <div>
+          <span class="flm-eyebrow">JOIN · 共创</span>
+          <h2>把你的故事，交给更多愿意认真看的人</h2>
+          <p>无论是一段十分钟的独白，还是一部完整的剧情短片，只要它足够真实、足够具体，我们都愿意为它留一个位置。禁止的爱电影官方网站持续开放投稿入口，期待与你一起拓展情感影像的边界。</p>
+        </div>
+        <div class="flm-submit-actions">
+          <button class="flm-btn flm-btn-primary" type="button" data-flm-modal="flm-modal-submit">立即投稿</button>
+          <button class="flm-btn flm-btn-ghost" type="button" data-flm-share>分享给朋友</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="flm-footer">
+  <div class="flm-wrap">
+    <div class="flm-footer-grid">
+      <div>
+        <a class="flm-brand" href="#flm-hero" style="margin-bottom:14px;">
+          <span class="flm-brand-mark">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h6v16H6z" fill="#fff"/><path d="M14 4h4l-2 8 2 8h-4z" fill="#fff" opacity=".7"/></svg>
+          </span>
+          <span class="flm-brand-text"><b>禁止的爱</b><span>FILM OFFICIAL</span></span>
+        </a>
+        <p>禁止的爱电影官方网站，专注情感剧情与人文影像的视频品牌。以原创、正版、高清为底线，持续运营值得信赖的内容生态，陪伴创作者与观众一起成长。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#flm-picks">精选影像</a></li>
+          <li><a href="#flm-analysis">深度解析</a></li>
+          <li><a href="#flm-specials">专题企划</a></li>
+          <li><a href="#flm-ranks">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与方式</h4>
+        <ul>
+          <li><a href="#flm-authors">创作者名录</a></li>
+          <li><a href="#flm-submit">投稿入口</a></li>
+          <li><a href="#flm-faq">常见问题</a></li>
+          <li><a href="#flm-faq">社区规范</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系与合作</h4>
+        <ul>
+          <li>商务合作：brand@film-official.com</li>
+          <li>投稿咨询：submit@film-official.com</li>
+          <li>工作时间：周一至周五 10:00–18:00</li>
+          <li>持续运营中 · 官方发布</li>
+        </ul>
+      </div>
+    </div>
+    <div class="flm-footer-bottom">
+      <span>© 2026 禁止的爱电影 官方网站 版权所有</span>
+      <span>京ICP备 2026000000 号 · 网络文化经营许可证</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗们 -->
+<div class="flm-modal" id="flm-modal-submit" role="dialog" aria-modal="true" aria-labelledby="flm-modal-submit-title">
+  <div class="flm-modal-box">
+    <button class="flm-modal-close" type="button" aria-label="关闭投稿弹窗" data-flm-close>×</button>
+    <h3 id="flm-modal-submit-title">投递我的作品</h3>
+    <p>填写基本信息即可完成报名，编辑团队将在 7 个工作日内与你联系。</p>
+    <input type="text" id="flm-submit-name" placeholder="作品名称" aria-label="作品名称">
+    <input type="text" id="flm-submit-contact" placeholder="联系方式（邮箱或微信）" aria-label="联系方式">
+    <textarea id="flm-submit-desc" rows="4" placeholder="用一两句话介绍你的作品与创作动机" aria-label="作品简介"></textarea>
+    <button class="flm-btn flm-btn-primary" type="button" id="flm-submit-btn">提交报名</button>
+  </div>
+</div>
+
+<div class="flm-modal" id="flm-modal-comment" role="dialog" aria-modal="true" aria-labelledby="flm-modal-comment-title">
+  <div class="flm-modal-box">
+    <button class="flm-modal-close" type="button" aria-label="关闭评论弹窗" data-flm-close>×</button>
+    <h3 id="flm-modal-comment-title">写一条评论</h3>
+    <p>请留下具体、真诚的观感，避免剧透式争吵与商业导流。</p>
+    <textarea id="flm-comment-text" rows="4" placeholder="说说这部片子让你想到了什么" aria-label="评论内容"></textarea>
+    <button class="flm-btn flm-btn-primary" type="button" id="flm-comment-btn">发布评论</button>
+  </div>
+</div>
+
+<div class="flm-modal" id="flm-modal-share" role="dialog" aria-modal="true" aria-labelledby="flm-modal-share-title">
+  <div class="flm-modal-box">
+    <button class="flm-modal-close" type="button" aria-label="关闭分享弹窗" data-flm-close>×</button>
+    <h3 id="flm-modal-share-title">分享这部作品</h3>
+    <p>选择你要分享的渠道，或直接复制链接发送给朋友。</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px;">
+      <button class="flm-btn flm-btn-ghost flm-btn-sm" type="button" data-flm-toast="已复制内容，可粘贴到微信分享">微信</button>
+      <button class="flm-btn flm-btn-ghost flm-btn-sm" type="button" data-flm-toast="已生成微博分享内容">微博</button>
+      <button class="flm-btn flm-btn-ghost flm-btn-sm" type="button" data-flm-toast="已生成 QQ 分享内容">QQ</button>
+      <button class="flm-btn flm-btn-primary flm-btn-sm" type="button" data-flm-copy="https://example.com/film/rain-after">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<div class="flm-modal" id="flm-modal-author" role="dialog" aria-modal="true" aria-labelledby="flm-modal-author-title">
+  <div class="flm-modal-box">
+    <button class="flm-modal-close" type="button" aria-label="关闭作者弹窗" data-flm-close>×</button>
+    <h3 id="flm-modal-author-title">创作者档案</h3>
+    <p id="flm-modal-author-desc"></p>
+  </div>
+</div>
+
+<div class="flm-toast" id="flm-toast" role="status" aria-live="polite"></div>
+<button class="flm-backtop" id="flm-backtop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+  var toastEl = document.getElementById('flm-toast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2400);
+  }
+
+  // 移动端导航折叠
+  var burger = document.getElementById('flm-burger');
+  var nav = document.getElementById('flm-nav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('is-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('is-open');
+        burger.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 搜索前端反馈
+  var searchInput = document.getElementById('flm-search-input');
+  var searchFeedback = document.getElementById('flm-search-feedback');
+  var searchIndex = [
+    {t:'雨停之后：一封迟到了十二年的信', k:'剧情 沈知白 情感'},
+    {t:'站台尽头：我们最后一次并肩看末班车', k:'林晚照 异地 纪实'},
+    {t:'旧相册的第七页：母亲年轻时的那场雨', k:'周允之 家庭 修复'},
+    {t:'山那边有条河：离乡十年后的第一次回望', k:'顾青禾 纪录片 返乡'},
+    {t:'无声告白：没有台词的七分钟', k:'程述 实验 光影'},
+    {t:'未寄出的信 专题企划', k:'专题 冬季 共创'},
+    {t:'小城夜行 专题企划', k:'专题 城市 夜晚'}
+  ];
+  if(searchInput && searchFeedback){
+    searchInput.addEventListener('input', function(){
+      var q = searchInput.value.trim();
+      if(!q){
+        searchFeedback.classList.remove('is-open');
+        searchFeedback.textContent = '';
+        return;
+      }
+      var res = searchIndex.filter(function(item){
+        return item.t.indexOf(q) > -1 || item.k.indexOf(q) > -1;
+      });
+      if(res.length){
+        searchFeedback.innerHTML = '找到 ' + res.length + ' 条相关内容：<br>' + res.slice(0,4).map(function(r){ return '· ' + r.t; }).join('<br>');
+      }else{
+        searchFeedback.textContent = '暂未匹配到「' + q + '」，试试搜索「情感」「专题」或创作者名字';
+      }
+      searchFeedback.classList.add('is-open');
+    });
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        showToast(searchInput.value.trim() ? '已提交搜索：' + searchInput.value.trim() : '请输入搜索关键词');
+      }
+    });
+  }
+
+  // 点赞 / 收藏
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-flm-like]');
+    if(likeBtn){
+      var active = likeBtn.getAttribute('aria-pressed') === 'true';
+      likeBtn.setAttribute('aria-pressed', active ? 'false' : 'true');
+      likeBtn.classList.toggle('is-active', !active);
+      likeBtn.textContent = (!active ? '♥ 已赞' : '♡ 点赞');
+      showToast(!active ? '已点赞，谢谢你让好作品被看见' : '已取消点赞');
+      return;
+    }
+    var favBtn = e.target.closest('[data-flm-fav]');
+    if(favBtn){
+      var favActive = favBtn.getAttribute('aria-pressed') === 'true';
+      favBtn.setAttribute('aria-pressed', favActive ? 'false' : 'true');
+      favBtn.classList.toggle('is-active', !favActive);
+      favBtn.textContent = (!favActive ? '★ 已收藏' : '☆ 收藏');
+      showToast(!favActive ? '已加入收藏夹' : '已取消收藏');
+      return;
+    }
+  });
+
+  // 复制链接
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        showToast('链接已复制到剪贴板');
+      }).catch(function(){
+        showToast('复制失败，请手动选择链接');
+      });
+    }else{
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); showToast('链接已复制到剪贴板'); }
+      catch(err){ showToast('复制失败，请手动选择链接'); }
+      document.body.removeChild(ta);
+    }
+  }
+  document.addEventListener('click', function(e){
+    var copyBtn = e.target.closest('[data-flm-copy]');
+    if(copyBtn){
+      copyText(copyBtn.getAttribute('data-flm-copy'));
+      return;
+    }
+    var shareBtn = e.target.closest('[data-flm-share]');
+    if(shareBtn){
+      openModal('flm-modal-share');
+      return;
+    }
+    var toastBtn = e.target.closest('[data-flm-toast]');
+    if(toastBtn){
+      showToast(toastBtn.getAttribute('data-flm-toast'));
+      return;
+    }
+    var modalBtn = e.target.closest('[data-flm-modal]');
+    if(modalBtn){
+      openModal(modalBtn.getAttribute('data-flm-modal'));
+      return;
+    }
+    if(e.target.closest('[data-flm-close]')){
+      closeAllModals();
+      return;
+    }
+    if(e.target.classList && e.target.classList.contains('flm-modal')){
+      closeAllModals();
+    }
+  });
+
+  // 作者弹窗
+  document.addEventListener('click', function(e){
+    var head = e.target.closest('[data-flm-author]');
+    if(!head) return;
+    var info = head.getAttribute('data-flm-author').split('|');
+    var title = document.getElementById('flm-modal-author-title');
+    var desc = document.getElementById('flm-modal-author-desc');
+    if(title && desc){
+      title.textContent = info[0] + ' · ' + info[1];
+      desc.textContent = info[2] + ' 欢迎在「创作者」板块查看其全部作品与最新动态。';
+    }
+    openModal('flm-modal-author');
+  });
+
+  var lastFocus = null;
+  function openModal(id){
+    var modal = document.getElementById(id);
+    if(!modal) return;
+    closeAllModals();
+    lastFocus = document.activeElement;
+    modal.classList.add('is-open');
+    var first = modal.querySelector('input,textarea,button');
+    if(first) first.focus();
+  }
+  function closeAllModals(){
+    document.querySelectorAll('.flm-modal.is-open').forEach(function(m){ m.classList.remove('is-open'); });
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAllModals();
+  });
+
+  // 投稿提交
+  var submitBtn = document.getElementById('flm-submit-btn');
+  if(submitBtn){
+    submitBtn.addEventListener('click', function(){
+      var name = document.getElementById('flm-submit-name');
+      var contact = document.getElementById('flm-submit-contact');
+      if(!name.value.trim() || !contact.value.trim()){
+        showToast('请填写作品名称与联系方式');
+        return;
+      }
+      name.value = ''; contact.value = '';
+      var desc = document.getElementById('flm-submit-desc');
+      if(desc) desc.value = '';
+      closeAllModals();
+      showToast('投稿已提交，我们会在 7 个工作日内联系你');
+    });
+  }
+
+  // 评论提交
+  var commentBtn = document.getElementById('flm-comment-btn');
+  if(commentBtn){
+    commentBtn.addEventListener('click', function(){
+      var text = document.getElementById('flm-comment-text');
+      if(!text.value.trim()){
+        showToast('评论内容不能为空');
+        return;
+      }
+      text.value = '';
+      closeAllModals();
+      showToast('评论已发布，感谢你的真诚分享');
+    });
+  }
+
+  // 数字滚动
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-flm-count'), 10) || 0;
+    var start = 0, duration = 1100, t0 = null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      var p = Math.min((ts - t0) / duration, 1);
+      var val = Math.floor(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+      el.textContent = val.toLocaleString('zh-CN');
+      if(p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('zh-CN');
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('[data-flm-count]');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCount(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.4});
+    counters.forEach(function(c){ io.observe(c); });
+  }else{
+    counters.forEach(function(c){ c.textContent = c.getAttribute('data-flm-count'); });
+  }
+
+  // 回到顶部
+  var backtop = document.getElementById('flm-backtop');
+  if(backtop){
+    window.addEventListener('scroll', function(){
+      backtop.classList.toggle('is-show', window.scrollY > 520);
+    }, {passive:true});
+    backtop.addEventListener('click', function(){
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  }
+})();
+</script>
+</body>
+  </html>
